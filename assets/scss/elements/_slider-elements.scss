@@ -1,0 +1,48 @@
+
+.tm-slider-arrow {
+    position: relative;
+
+    &-prev,
+    &-next {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        padding: 0;
+        height: 40px;
+        line-height: 1;
+        width: 40px;
+        display: inline-block;
+        border: 1px solid $color-theme;
+        background: $color-theme;
+        color: #ffffff;
+        margin-top: -20px;
+        font-size: 14px;
+    }
+
+    &-prev {
+        left: 0;
+        right: auto;
+    }
+
+    &-next {
+        right: 0;
+        left: auto;
+    }
+}
+
+.tm-slider-arrow-hovervisible {
+    .tm-slider-arrow {
+
+        &-prev,
+        &-next {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &:hover .tm-slider-arrow-prev,
+    &:hover .tm-slider-arrow-next {
+        visibility: visible;
+        opacity: 1;
+    }
+}
